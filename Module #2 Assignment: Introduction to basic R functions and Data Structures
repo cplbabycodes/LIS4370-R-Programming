@@ -5,5 +5,3 @@
 > myMean(assignment2)
 [1] 19.25
 
-When evaluating the function myMean, we can find the average of the vector used as an input. 
-This function uses the sum of the vector using sum(assignment2) and diving it by the total number of elements in the vector using length(assignment2). This will give the mean.
