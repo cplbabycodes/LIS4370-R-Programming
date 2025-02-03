@@ -1,0 +1,40 @@
+Given code:
+
+> Name = c("Jeb", "Donald", "Ted", "Marco", "Carly", "Hillary", "Bernie")
+> ABC_political = c(4, 62, 51, 21, 2, 14, 15)
+> NCB_political = c(12, 75, 43, 19, 1, 21, 19)
+
+To analyze these results, I found the total amount of collected polls from both networks. The highest being at 190 for CBS and ABC had a lower number of calculated pollls.
+I also found the mean just to compare each total.
+
+totalABC <- sum(ABC_political_poll_results)
+totalCBS <- sum(CBS_political_poll_results)
+
+mean(ABC_political_poll_results)
+mean(CBS_political_poll_results)
+
+
+> mean(ABC_political_poll_results)
+[1] 24.14286
+> mean(CBS_political_poll_results)
+[1] 27.14286
+
+I created a data.frame and got a table
+data <- data.frame(Name, ABC_political_poll_results, CBS_political_poll_results)
+
+
+
+comparing my method to the given answer code:
+
+results = cbind(Name, ABC_political, NCB_political)
+results
+results.df = data.frame(Name, ABC_political, NCB_political)
+results.df
+
+r = rowMeans(results.df[,2:3])
+r.df = data.frame(Name, r)
+mean(as.matrix(results.df[,2:3]))
+
+output:
+[1] 25.64286
+
